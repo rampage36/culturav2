@@ -1,0 +1,9 @@
+.footer {
+    background-color: #222022;
+    grid-area: f;
+    height: 220px;
+    font-family:'Source Code Pro', monospace;
+    color: azure;
+    font-weight: 300px;
+    height: 220px;
+}

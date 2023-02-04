@@ -1,0 +1,21 @@
+.navbar {
+    padding: 20px;
+    background-color: #4c4947;
+    grid-area: n;
+    width: 100px;
+    font-family:'Source Code Pro', monospace;
+    color: azure;
+}
+
+.item  {
+    color: azure;
+    font-size: 30px;
+    text-decoration: none;
+    text-shadow: #54504c;
+    text-transform: uppercase;
+}
+
+.active {
+    color: aquamarine;
+    text-decoration: none;
+}

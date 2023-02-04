@@ -1,0 +1,11 @@
+.header {
+    background-color: #222022;
+    grid-area: h;
+    box-sizing: border-box;
+}
+
+.header img {
+    width: 150px;
+    margin-top: 20px;
+}
+
