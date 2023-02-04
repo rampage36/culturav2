@@ -1,6 +1,16 @@
 .music {
-    background-color: #ceccce;
     grid-area: a;
-    width: 1280px; 
-    height: 1980px;
+    width: 100%;
 }   
+
+.grid {
+    background: linear-gradient(#222022, #ceccce);
+    margin-top: 0px;
+    display: block;
+    justify-content: space-between;
+    gap: 10px;
+    grid-template-areas: 
+    "n n n n n n "
+    "c d";
+  }
+  

@@ -1,14 +1,14 @@
 
 .grid {
   display: grid;
-  gap: 10px;
+  gap: 5px;
   grid-template-areas: 
   "h h"
   "n a"
   "f f";
   grid-template-rows: 120px 1fr;
   grid-template-columns: 2fr 10fr;
-
+  background: linear-gradient(#000000e2, #ceccce);
 }
 
 .gridContent {

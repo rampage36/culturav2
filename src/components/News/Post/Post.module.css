@@ -1,0 +1,8 @@
+.post {
+    color: black;
+    font-size: 30px;
+    padding: 40px;
+    border-style: inset;
+    margin: 5px;
+    background: linear-gradient(#efedef, #ceccce);;
+}

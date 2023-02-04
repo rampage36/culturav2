@@ -1,6 +1,6 @@
 .navbar {
     padding: 20px;
-    background-color: #4c4947;
+    background: linear-gradient(#222022, #ceccce);
     grid-area: n;
     width: 100px;
     font-family:'Source Code Pro', monospace;
@@ -11,11 +11,11 @@
     color: azure;
     font-size: 30px;
     text-decoration: none;
-    text-shadow: #54504c;
+    text-shadow: #ceccce;
     text-transform: uppercase;
 }
 
 .active {
-    color: aquamarine;
+    color: rgba(201, 48, 48, 0.877); 
     text-decoration: none;
 }
