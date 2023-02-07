@@ -2,10 +2,12 @@ import React from "react";
 import css from "./Video.module.css"
 
 const Video = () => {
-    return ( <div className={css.video}>
+    return ( 
             <div className={css.grid}>
                 <div className={css.firstSong}>
-                    <iframe width="660" height="415" src="https://www.youtube.com/embed/c9lykauGT1U" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                    <iframe width="660" height="415" src="https://www.youtube.com/embed/c9lykauGT1U" 
+                    title="YouTube video player" frameborder="0" 
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
                 </div>
                 <div className={css.secondSong}>
                     <iframe width="660" height="415" src="https://www.youtube.com/embed/c9lykauGT1U" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
@@ -41,7 +43,6 @@ const Video = () => {
                             allowFullScreen></iframe>
                 </div>
             </div>
-        </div>
     )
 }
 

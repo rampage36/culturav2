@@ -19,7 +19,7 @@ const App = () => {
           <div className="gridContent">
               <Routes>
                   <Route path="/about"element={<About/>}/>
-                  <Route path="/news"element={<News/>}/>
+                  <Route path="/news" element={<News/>}/>
                   <Route path="/photo"element={<Photo/>}/>
                   <Route path="/music"element={<Music/>}/>
                   <Route path="/video"element={<Video/>}/>
