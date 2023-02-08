@@ -2,7 +2,7 @@
     color: black;
     font-size: 30px;
     padding: 40px;
-    border-style: inset;
-    margin: 5px;
-    background: linear-gradient(#efedef, #ceccce);;
+    border-style: none;
+    margin: 25px;
+    background:  linear-gradient(#22202217, #ceccce0e);
 }
