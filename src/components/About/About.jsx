@@ -1,7 +1,7 @@
 import React from "react";
 import css from "./About.module.css"
 
-const About = () => {
+export const About = () => {
     return (
         <div className={css.about}>
                 <div className={css.text}>
@@ -14,5 +14,3 @@ const About = () => {
         </div>
     )
 }
-
-export default About;

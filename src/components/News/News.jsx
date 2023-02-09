@@ -1,8 +1,8 @@
 import React from "react";
 import css from "./News.module.css"
-import Post from "./Post/Post.jsx";
+import {Post} from "./Post/Post.jsx";
 
-const News = (props) => {
+export const News = (props) => {
     
     return (
         <div className={css.news}>
@@ -10,5 +10,3 @@ const News = (props) => {
         </div>
     )
 }
-
-export default News;

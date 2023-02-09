@@ -1,65 +1,43 @@
 import React from "react";
 import css from "./Music.module.css"
 
-const Music = () => {
-    return ( 
-            <div className={css.grid}>
-                <div className={css.songItem}>
-                    <iframe width="350" height="350" title="soundcloud9"
-                            frameborder="0"
-                            src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1346667592&visual=true"></iframe>
-                </div>
-                <div className={css.songItem}>
-                    <iframe width="350" height="350" title="soundcloud9"
-                            frameborder="0"
-                            src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1340694760&visual=true"></iframe>
-                </div>
+const music1 = [
+  {url: "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1346667592&visual=true" },
+  {url: "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1346667592&visual=true" },
+  {url: "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1346667592&visual=true" },
+  {url: "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1346667592&visual=true" },
+  {url: "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1346667592&visual=true" },
+  {url: "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1346667592&visual=true" },
+  {url: "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1346667592&visual=true" },
+  {url: "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1346667592&visual=true" },
+  {url: "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1346667592&visual=true" },
+];
 
-                <div className={css.songItem}>
-                    <iframe width="350" height="350" title="soundcloud9"
-                            frameborder="0"
-                            src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1162968250&visual=true"></iframe>
-                </div>
+/*{testArray.map((playerURL,i) =>
+  <div className={css.songItem} key={i}>
+    <iframe
+      width="350"
+      height="350"
+      title="soundcloud9"
+      frameborder="0"
+      src=playerURL
+    />
+  </div>
+)}*/
 
-                <div className={css.songItem}>
-                    <iframe width="350" height="350" title="soundcloud9"
-                            frameborder="0"
-                            src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1162968250&visual=true"></iframe>
-                </div>
-
-                <div className={css.songItem}>
-                    <iframe width="350" height="350" title="soundcloud9"
-                            frameborder="0"
-                            src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1346667592&visual=true"></iframe>
-                </div>
-
-                <div className={css.songItem}>
-                    <iframe width="350" height="350" title="soundcloud9"
-                            frameborder="0"
-                            src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1340694760&visual=true"></iframe>
-                </div>
-
-                <div className={css.songItem}>
-                    <iframe width="350" height="350" title="soundcloud9"
-                            frameborder="0"
-                            src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1161741805&visual=true"></iframe>
-                </div>
-
-                <div className={css.songItem}>
-                    <iframe width="350" height="350" title="soundcloud9"
-                            frameborder="0"
-                            src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1346667592&visual=true"></iframe>
-                </div>
-
-                <div className={css.songItem}>
-                    <iframe width="350" height="350" title="soundcloud9"
-                            frameborder="0"
-                            src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1346667592&visual=true"></iframe>
-                </div>
-
-            </div>
-        
+export const Music = () => {
+  return (
+    <div className={css.grid}>
+        {music1.map(({url}, i) =>
+         <div className={css.songItem} key={i}>
+            <iframe
+              width="350"
+              height="350"
+              title="soundcloud9"
+              frameBorder="0"
+              src={url}
+            />
+          </div>)}
+    </div>
     )
 }
-
-export default Music;
