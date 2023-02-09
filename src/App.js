@@ -1,12 +1,14 @@
 import React from "react";
-import Navbar from './components/Navbar/Navbar'
-import Header from './components/Header/Header'
-import About from './components/About/About'
-import News from './components/News/News'
-import Photo from './components/Photo/Photo'
-import Music from './components/Music/Music'
-import Video from './components/Video/Video'
-import Footer from './components/Footer/Footer'
+import {
+  Navbar,
+  Music,
+  News,
+  Footer,
+  Header,
+  Video,
+  Photo,
+  About,
+} from './components'
 import './App.css'
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
