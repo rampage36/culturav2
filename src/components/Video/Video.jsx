@@ -1,20 +1,10 @@
 import React from "react";
 import css from "./Video.module.css"
 
-const video1 = [
-  {url: "https://www.youtube.com/embed/c9lykauGT1U"  },
-  {url: "https://www.youtube.com/embed/c9lykauGT1U"  },
-  {url: "https://www.youtube.com/embed/c9lykauGT1U"  },
-  {url: "https://www.youtube.com/embed/c9lykauGT1U"  },
-  {url: "https://www.youtube.com/embed/c9lykauGT1U"  },
-  {url: "https://www.youtube.com/embed/c9lykauGT1U"  },
-
-];
-
-export const Video = () => {
+export const Video = (props) => {
   return (
     <div className={css.grid}>
-      {video1.map(({url}, i) =>
+      {props.video1.map(({url}, i) =>
         <div className={css.songItem} key={i}>
           <iframe
             width="660"

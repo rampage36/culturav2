@@ -6,7 +6,7 @@ export const News = (props) => {
     
     return (
         <div className={css.news}>
-            <Post />
+            <Post posts={props.posts}/>
         </div>
     )
 }

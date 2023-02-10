@@ -12,7 +12,7 @@ import {
 import './App.css'
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
-const App = () => {
+const App = (props) => {
   return (
     <BrowserRouter>
       <div className='grid'>
@@ -21,10 +21,10 @@ const App = () => {
           <div className="gridContent">
               <Routes>
                   <Route path="/about"element={<About/>}/>
-                  <Route path="/news" element={<News/>}/>
+                  <Route path="/news" element={<News posts={props.posts}/>}/>
                   <Route path="/photo"element={<Photo/>}/>
-                  <Route path="/music"element={<Music/>}/>
-                  <Route path="/video"element={<Video/>}/>
+                  <Route path="/music"element={<Music music1={props.music1}/>}/>
+                  <Route path="/video"element={<Video video1={props.video1}/>}/>
               </Routes>
           </div>
           <Footer className='footer' />  

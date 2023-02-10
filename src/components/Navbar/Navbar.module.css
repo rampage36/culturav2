@@ -1,6 +1,6 @@
 .navbar {
     padding: 20px;
-    background: linear-gradient(#222022, #ceccce);
+    background: #ceccce00;
     grid-area: n;
     width: 100px;
     font-family:'Source Code Pro', monospace;

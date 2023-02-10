@@ -1,18 +1,6 @@
 import React from "react";
 import css from "./Music.module.css"
 
-const music1 = [
-  {url: "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1346667592&visual=true" },
-  {url: "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1346667592&visual=true" },
-  {url: "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1346667592&visual=true" },
-  {url: "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1346667592&visual=true" },
-  {url: "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1346667592&visual=true" },
-  {url: "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1346667592&visual=true" },
-  {url: "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1346667592&visual=true" },
-  {url: "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1346667592&visual=true" },
-  {url: "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1346667592&visual=true" },
-];
-
 /*{testArray.map((playerURL,i) =>
   <div className={css.songItem} key={i}>
     <iframe
@@ -25,10 +13,10 @@ const music1 = [
   </div>
 )}*/
 
-export const Music = () => {
+export const Music = (props) => {
   return (
     <div className={css.grid}>
-        {music1.map(({url}, i) =>
+        {props.music1.map(({url}, i) =>
          <div className={css.songItem} key={i}>
             <iframe
               width="350"

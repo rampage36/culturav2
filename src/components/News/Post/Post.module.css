@@ -1,8 +1,10 @@
 .post {
-    color: black;
+    color: azure;
     font-size: 30px;
     padding: 40px;
     border-style: none;
     margin: 25px;
     background:  linear-gradient(#22202217, #ceccce0e);
+    border-left: 50%;
+    border-style: solid;
 }
