@@ -21,10 +21,10 @@ const App = (props) => {
           <div className="gridContent">
               <Routes>
                   <Route path="/about"element={<About/>}/>
-                  <Route path="/news" element={<News posts={props.posts}/>}/>
+                  <Route path="/news" element={<News posts={props.state.newsPage.posts}/>}/>
                   <Route path="/photo"element={<Photo/>}/>
-                  <Route path="/music"element={<Music music1={props.music1}/>}/>
-                  <Route path="/video"element={<Video video1={props.video1}/>}/>
+                  <Route path="/music"element={<Music music1={props.state.musicPage.music1}/>}/>
+                  <Route path="/video"element={<Video video1={props.state.videoPage.video1}/>}/>
               </Routes>
           </div>
           <Footer className='footer' />  
