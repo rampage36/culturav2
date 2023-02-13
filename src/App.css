@@ -8,7 +8,7 @@
   "f f";
   grid-template-rows: 120px 1fr;
   grid-template-columns: 2fr 10fr;
-  background: linear-gradient(#000000e2, #ceccce);
+  background: linear-gradient(125deg, #000000, #ceccce83);
 }
 
 .gridContent {

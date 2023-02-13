@@ -27,7 +27,7 @@ const App = (props) => {
                   <Route path="/video"element={<Video video1={props.state.videoPage.video1}/>}/>
               </Routes>
           </div>
-          <Footer className='footer' />  
+          <Footer className='footer' addNews={props.addNews}/>  
       </div>
     </BrowserRouter>
     )

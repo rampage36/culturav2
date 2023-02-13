@@ -1,3 +1,5 @@
+import {reRender} from '../render.js'
+
 export let state = { 
         musicPage: {
             music1: [
@@ -32,4 +34,14 @@ export let state = {
               ]
         }
         
+}
+
+export let addNews = (newsMessage) => {
+    let newPost = {
+      id: 5,
+      postdata: newsMessage,
+    }
+    state.newsPage.posts.push(newPost);
+    reRender(state);
+    newPost.current.value = '';
 }

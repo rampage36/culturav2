@@ -1,12 +1,40 @@
 .footer {
     background-color: #222022;
     grid-area: f;
-    height: 220px;
+    height: 320px;
     font-family:'Source Code Pro', monospace;
     color: azure;
     font-weight: 300px;
-    height: 220px;
     text-align: center;
     padding-top: 50px;
     margin-top: 240px;
+}
+
+.textarea {
+    margin-top: 50px;
+    margin-bottom: 20px;
+    width:500px;
+    resize: vertical;
+    padding:15px;
+    border-radius:15px;
+    border:0;
+    box-shadow:4px 4px 10px rgba(0,0,0,0.06);
+    height:150px;
+}
+
+.button {
+    display: inline-block;
+    background-color: #222022;
+    text-decoration: none;
+    user-select: none;
+    padding: .5em 2em;
+    outline: none;
+    border: 2px solid;
+    border-radius: 1px;
+    transition: 0.2s;
+    color: rgba(240, 255, 255, 0.637);
+    border-radius: 15px;
+}
+.button:hover {
+    background-color: rgba(255,255,255,.2); 
 }
