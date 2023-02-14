@@ -4,11 +4,10 @@
 }
 
 .grid {
-    background: linear-gradient(#222022, #ceccce);
     margin-top: 0px;
     display: grid;
     justify-content: space-between;
-    gap: 5px;
+    gap: 25px;
     grid-template-columns: 1fr 1fr;
 
 }

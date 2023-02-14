@@ -13,6 +13,8 @@
     text-align: center;
     position: relative;
     top: 10px;
+    margin: 0px;
+    font-family:'Source Code Pro', monospace;
 }
 
 .text span {
@@ -23,7 +25,10 @@
     width: 65%;
     z-index: 1;
     position: relative;
-    height: auto;
+    height:  65%;
     bottom: 155px;
-    left: 175px;
+    left: 110px;
+}
+.h1 { 
+    margin-bottom: 5px;
 }
