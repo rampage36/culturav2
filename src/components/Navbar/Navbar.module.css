@@ -5,7 +5,7 @@
     width: 100px;
     font-family:'Source Code Pro', monospace;
     color: azure;
-    position: sticky;
+    
 }
 
 .item  {
@@ -14,7 +14,8 @@
     text-decoration: none;
     text-shadow: #ceccce;
     text-transform: uppercase;
-    
+    /* position: fixed;
+    margin: 50px; */
 }
 
 .active {

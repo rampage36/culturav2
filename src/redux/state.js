@@ -20,7 +20,8 @@ export let state = {
                 {postdata: "Maecenas non lorem elementum, venenatis leo ac, tincidunt libero. Maecenas dignissim varius vulputate. Sed efficitur urna massa, quis finibus eros auctor at. Nunc vehicula at elit eu vehicula. Ut ullamcorper laoreet velit a gravida. Aliquam quis tempor ligula. Pellentesque lacinia nisi et blandit tempus. Interdum et malesuada fames ac ante ipsum primis in faucibus. Sed vitae pellentesque lorem."},
                 {postdata: "Maecenas id mauris suscipit est fringilla egestas. Nunc vitae vulputate felis. Cras a nisi sit amet ex rutrum auctor. Ut porttitor sodales mi, eu ornare neque hendrerit vitae. Phasellus ut orci pharetra, dignissim libero vitae, euismod nulla. Curabitur mollis dui non enim gravida bibendum. Vivamus porttitor eget neque ac volutpat."},
                 {postdata: "Donec porttitor felis vitae ligula vestibulum, in maximus mauris laoreet. Nunc egestas nisl non nunc consequat efficitur. Ut finibus, mauris eget maximus venenatis, ipsum augue egestas libero, nec pretium arcu risus at ex. Proin nec ultricies quam. Donec sagittis commodo sem. Sed eget aliquam elit. Duis molestie urna venenatis ornare pulvinar. Cras scelerisque pulvinar nunc, a fringilla ex molestie id. Duis vel justo vel orci pharetra cursus vel nec augue. Ut condimentum ex ut libero interdum tincidunt. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Aliquam sem arcu, fringilla nec condimentum ut, sagittis id turpis. Vivamus posuere nisi quis est pellentesque venenatis. Lorem ipsum dolor sit amet, consectetur adipiscing elit. In interdum ornare pharetra."}
-                ]
+                    ],
+                newPostText: "New post text"
         },
         videoPage: {
             video1: [
@@ -30,18 +31,23 @@ export let state = {
                 {url: "https://www.youtube.com/embed/R0wtqiKPxPk"  },
                 {url: "https://www.youtube.com/embed/wOoGqzBsKLE"  },
                 {url: "https://www.youtube.com/embed/Lale88ntXlI"  }
-              
-              ]
+                    ]
         }
         
 }
 
-export let addNews = (newsMessage) => {
+window.state=state;
+
+export let addNews = () => {
     let newPost = {
       id: 5,
-      postdata: newsMessage,
-    }
+      postdata: state.newPostText
+    };
     state.newsPage.posts.push(newPost);
     reRender(state);
-    newPost.current.value = '';
+}
+
+export let updateNewPostText = (newText) => {
+    state.newPostText = newText;
+    reRender(state);
 }

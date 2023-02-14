@@ -6,14 +6,22 @@ export const Footer = (props) => {
 let newTextElement = React.createRef(); 
 
 let addNews = () => {
+    props.addNews();
+    props.updateNewPostText('');
+}
+
+let onNewsChange = () => {
     let text = newTextElement.current.value;
-    props.addNews(text)
+        props.updateNewPostText(text);
 }
 
     return (
         <div className={css.footer}>
              Ⓒ 1995 Cultura//Voronezh... <br/> 
-             <textarea className={css.textarea} ref={newTextElement}></textarea>
+             <textarea className={css.textarea} 
+                        onChange={onNewsChange}
+                        ref={newTextElement}
+                        value={props.newPostText}/>
              <br/> 
              <button className={css.button}  onClick={addNews}>Send</button>
         </div>
