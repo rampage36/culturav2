@@ -1,6 +1,6 @@
 import React from "react";
 import css from "./About.module.css"
-import logo from "../Img/About5.png";
+import logo from "../Img/About6.png";
 
 export const About = () => {
     return (
