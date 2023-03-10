@@ -41,13 +41,14 @@ window.state=state;
 export let addNews = () => {
     let newPost = {
       id: 5,
-      postdata: state.newPostText
+      postdata: state.newsPage.newPostText
     };
     state.newsPage.posts.push(newPost);
+    state.newsPage.newPostText = ''; 
     reRender(state);
 }
 
 export let updateNewPostText = (newText) => {
-    state.newPostText = newText;
+    state.newsPage.newPostText = newText;
     reRender(state);
 }

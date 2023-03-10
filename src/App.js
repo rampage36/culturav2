@@ -28,8 +28,9 @@ const App = (props) => {
               </Routes>
           </div>
           <Footer className='footer' 
-                  addNews={props.state.addNews}
-                  updateNewPostText={props.updateNewPostText}/>  
+                  addNews={props.addNews}
+                  updateNewPostText={props.updateNewPostText}
+                  newPostText={props.state.newsPage.newPostText}/>  
       </div>
     </BrowserRouter>
     )

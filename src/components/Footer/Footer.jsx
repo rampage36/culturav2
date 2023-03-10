@@ -7,7 +7,6 @@ let newTextElement = React.createRef();
 
 let addNews = () => {
     props.addNews();
-    props.updateNewPostText('');
 }
 
 let onNewsChange = () => {
@@ -19,8 +18,7 @@ let onNewsChange = () => {
         <div className={css.footer}>
              Ⓒ 1995 Cultura//Voronezh... <br/> 
              <textarea className={css.textarea} 
-                        onChange={onNewsChange}
-                        ref={newTextElement}
+                        onChange={onNewsChange} ref={newTextElement}
                         value={props.newPostText}/>
              <br/> 
              <button className={css.button}  onClick={addNews}>Send</button>
