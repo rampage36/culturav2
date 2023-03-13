@@ -1,6 +1,5 @@
-import {reRender} from '../render.js'
-
-export let state = { 
+let store ={
+    _state: { 
         musicPage: {
             music1: [
                 {url: "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1346667592&visual=true" },
@@ -33,22 +32,26 @@ export let state = {
                 {url: "https://www.youtube.com/embed/Lale88ntXlI"  }
                     ]
         }
-        
+},
+    getState() {
+        return this._state;
+    }, 
+    subscribe(observer){
+        this._reRender = observer;},
+    dispatch(action) { // { type: 'ADD-POST' }
+        if(action.type === 'ADD-POST') {
+            let newPost = {
+                id: 5,
+                postdata: this._state.newsPage.newPostText
+            };
+                this._state.newsPage.posts.push(newPost);
+                this._state.newsPage.newPostText = ''; 
+                this._reRender(this._state);
+        } else if (action.type === 'UPDATE-NEW-POST-TEXT') {
+                this._state.newsPage.newPostText = action.newText;
+                this._reRender(this._state); 
+        }
+    }
 }
 
-window.state=state;
-
-export let addNews = () => {
-    let newPost = {
-      id: 5,
-      postdata: state.newsPage.newPostText
-    };
-    state.newsPage.posts.push(newPost);
-    state.newsPage.newPostText = ''; 
-    reRender(state);
-}
-
-export let updateNewPostText = (newText) => {
-    state.newsPage.newPostText = newText;
-    reRender(state);
-}
+export default store; 

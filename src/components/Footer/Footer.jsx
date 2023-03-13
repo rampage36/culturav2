@@ -6,12 +6,12 @@ export const Footer = (props) => {
 let newTextElement = React.createRef(); 
 
 let addNews = () => {
-    props.addNews();
+    props.dispatch({ type: 'ADD-POST'});
 }
 
 let onNewsChange = () => {
     let text = newTextElement.current.value;
-        props.updateNewPostText(text);
+        props.dispatch({type: 'UPDATE-NEW-POST-TEXT', newText: text});
 }
 
     return (
