@@ -1,17 +1,19 @@
 import React from "react";
 import css from "./Footer.module.css"
+import {addPostActionCreator, 
+    updateNewPostTextActionCreator} from '../../redux/state.js'
 
 export const Footer = (props) => {
 
 let newTextElement = React.createRef(); 
 
 let addNews = () => {
-    props.dispatch({ type: 'ADD-POST'});
+    props.dispatch(addPostActionCreator());
 }
 
 let onNewsChange = () => {
     let text = newTextElement.current.value;
-        props.dispatch({type: 'UPDATE-NEW-POST-TEXT', newText: text});
+        props.dispatch(updateNewPostTextActionCreator(text));
 }
 
     return (
