@@ -1,5 +1,4 @@
-const ADD_POST = 'ADD-POST';
-const UPDATE_NEW_POST_TEXT = 'UPDATE-NEW-POST-TEXT';
+import newsFeedReducer from './news-feed-reducer.js'
 
 let store ={
     _state: { 
@@ -39,32 +38,19 @@ let store ={
     getState() {
         return this._state;
     }, 
+
     subscribe(observer){
         this._reRender = observer;},
-    dispatch(action) {
-        if(action.type === 'ADD-POST') {
-            let newPost = {
-                id: 5,
-                postdata: this._state.newsPage.newPostText
-            };
-                this._state.newsPage.posts.push(newPost);
-                this._state.newsPage.newPostText = ''; 
-                this._reRender(this._state);
-        } else if (action.type === 'UPDATE-NEW-POST-TEXT') {
-                this._state.newsPage.newPostText = action.newText;
-                this._reRender(this._state); 
-        }
-    }
-}
+    
+    _reRender() {
+            console.log('State was changed...')
+    }, 
 
-export const addPostActionCreator = () => {
-    return {
-        type: ADD_POST
-    }
-}
-export const updateNewPostTextActionCreator = (text) => {
-    return {
-        type: UPDATE_NEW_POST_TEXT, newText: text
+    dispatch(action) {
+
+        newsFeedReducer(this._state.newsPage, action);
+        
+        this._reRender(this._state);
     }
 }
 

@@ -1,7 +1,7 @@
 import React from "react";
 import css from "./Footer.module.css"
 import {addPostActionCreator, 
-    updateNewPostTextActionCreator} from '../../redux/state.js'
+    updateNewPostTextActionCreator} from '../../redux/news-feed-reducer'
 
 export const Footer = (props) => {
 
